@@ -43,8 +43,9 @@ public class MovementInput : MonoBehaviour {
 		cam.transform.position = new Vector3(8.45f, 2.403f, -2.214f);
 
 		controller = this.GetComponent<CharacterController> ();
+
 		//Lock the mouse cursor to the center of the game window
-		//Cursor.lockState = CursorLockMode.Locked;
+		Cursor.lockState = CursorLockMode.Locked;
 
 
 	}
