@@ -31,6 +31,11 @@ public class DoorController : MonoBehaviour
         {
             animator.SetBool("character_nearby", true);
         }
+        else if (Vector3.Distance(character.transform.position, transform.position) <= distance && doorName == "DoorFinish" 
+            && PlayerProgress.hasKey3 == true && PlayerProgress.hasKey2 == true && PlayerProgress.hasKey1 == true)
+        {
+            animator.SetBool("character_nearby", true);
+        }
         else
         {
             animator.SetBool("character_nearby", false);
