@@ -44,7 +44,7 @@ public class MovementInput : MonoBehaviour {
 
 		controller = this.GetComponent<CharacterController> ();
 		//Lock the mouse cursor to the center of the game window
-		Cursor.lockState = CursorLockMode.Locked;
+		//Cursor.lockState = CursorLockMode.Locked;
 
 
 	}

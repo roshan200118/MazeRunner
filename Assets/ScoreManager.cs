@@ -12,13 +12,15 @@ public class ScoreManager : MonoBehaviour
 
     private void Awake()
     {
+        //PlayerPrefs.DeleteAll();
         var json = PlayerPrefs.GetString("scores", "{}");
         scoreData = JsonUtility.FromJson<ScoreData>(json);
     }
 
     public IEnumerable<Score> GetHighScores()
     {
-        return scoreData.scores.OrderByDescending(x => x.score);
+        return scoreData.scores.OrderBy(x => x.score);
+        //scoreData.scores.OrderBy
     }
 
     public void AddScore(Score score)
