@@ -1,10 +1,8 @@
-###Roshan Nanthapalan
-#App-2: The Maze Runner: Not a Ripoff
+# App-2: The Maze Runner: Not a Ripoff
+## Roshan Nanthapalan
 
-Controls:
-Mouse - Look around
-WASD/Arrow Keys - Move around
-
-Notes:
-Press ESC to remove locked mouse cursor
-Press P to Pause Game
+# Controls:
+* Mouse           : Look around
+* WASD/Arrow Keys : Move around
+* Press ESC to remove locked mouse cursor
+* Press P to pause/unpause Game
