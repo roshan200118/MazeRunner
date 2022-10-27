@@ -1,5 +1,5 @@
-Roshan Nanthapalan
-App-2: The Maze Runner: Not a Ripoff
+###Roshan Nanthapalan
+#App-2: The Maze Runner: Not a Ripoff
 
 Controls:
 Mouse - Look around
