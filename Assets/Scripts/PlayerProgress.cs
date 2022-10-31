@@ -43,6 +43,7 @@ public class PlayerProgress : MonoBehaviour
         gameTimeText.text = string.Format("{0:0}:{1:00}:{2:00}", hours, minutes, seconds);
 
         //Show pause menu if "P" is clicked, let mouse cursor not be locked when pause menu shows
+        //Stop time and start time when pause/unpause 
         if (Input.GetKeyDown(KeyCode.P) == true)
         {
             pauseCanvas.gameObject.SetActive(!pauseCanvas.gameObject.activeInHierarchy);
@@ -58,16 +59,23 @@ public class PlayerProgress : MonoBehaviour
                 Time.timeScale = 1;
             }
         }
-
-
     }
 
     //If player runs into key, player has that key
     private void OnTriggerEnter(Collider other)
     {
+        //If the player collides with any key, play the pickupAudio
+        if (other.gameObject.layer == 7)
+        {
+            AudioSource audio = other.GetComponentInParent<AudioSource>();
+            audio.time = 0.3f;
+            audio.Play();
+        }
+
         if (other.CompareTag("Key1"))
         {
             other.gameObject.SetActive(false);
+
             hasKey1 = true;
         }
         else if (other.CompareTag("Key2"))
